@@ -1,4 +1,5 @@
-﻿using App5.Model;
+﻿
+using App5.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +13,7 @@ namespace App5.ViewModel
 
         private IClickModel clickModel;
         public ICommand ClickCommand { get; private set; }
-
+      
         public string ClicksCount
         {
             get

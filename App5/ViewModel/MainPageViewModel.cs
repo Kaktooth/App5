@@ -1,10 +1,13 @@
 ﻿
+
 using App5.Model;
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+
 
 namespace App5.ViewModel
 {
@@ -13,12 +16,19 @@ namespace App5.ViewModel
 
         private IClickModel clickModel;
         public ICommand ClickCommand { get; private set; }
-      
+
+        //public string bitcoinPrice = Currency.GetBitcoin().price+'$';
+
+        public string BitcoinPrice { get { return Currency.GetBitcoin().price + '$'; } }
+        public string BitcoinGrowth { get { return Currency.GetBitcoin().growth+ "%"; } }
+
         public string ClicksCount
         {
             get
             {
+                
                 return clickModel.Clicks.ToString()+'$';
+                
             }
         }
         public MainPageViewModel()

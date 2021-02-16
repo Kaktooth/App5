@@ -36,7 +36,7 @@ public class Currency
     }
     public static Currency GetBitcoin()
     {
-        HtmlNode htmlNode = scrapingBrowser.ParseHtmlNode(scrapingBrowser.GetHtml(url));
+        HtmlNode htmlNode = scrapingBrowser.ParseHtmlNode(scrapingBrowser.CallUrl(url));
         var bitcoin = new Currency();
         var pricepath = "//td[@class='views-field views-field-field-crypto-price views-align-right']";
         var growthpath = "//td[@class='views-field views-field-field-crypto-price-change-pc-24h views-align-right']";

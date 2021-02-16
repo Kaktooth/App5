@@ -19,8 +19,9 @@ namespace App5.ViewModel
 
         //public string bitcoinPrice = Currency.GetBitcoin().price+'$';
 
-        public string BitcoinPrice { get { return Currency.GetBitcoin().price + '$'; } }
-        public string BitcoinGrowth { get { return Currency.GetBitcoin().growth+ "%"; } }
+        public string BitcoinPrice { get { return Currency.GetBitcoin().price.Replace("$"," ") + '$'; } }
+
+        public string BitcoinGrowth { get { return Currency.GetBitcoin().growth; } }
 
         public string ClicksCount
         {

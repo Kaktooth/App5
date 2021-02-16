@@ -15,13 +15,16 @@ public sealed class Scraper
 {
     public Scraper() { }
 
-    private static async Task<string> CallUrl(string fullUrl)
+    public string CallUrl(string fullUrl)
     {
-        HttpClient client = new HttpClient();
-        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+        HttpClientHandler hch = new HttpClientHandler();
+        hch.Proxy = null;
+        hch.UseProxy = false;
+        HttpClient client = new HttpClient(hch);
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.SystemDefault;
         client.DefaultRequestHeaders.Accept.Clear();
         var response = client.GetStringAsync(fullUrl);
-        return await response;
+        return response.Result;
     }
     private List<string> ParseHtmlList(string html)
     {
@@ -47,12 +50,12 @@ public sealed class Scraper
         htmlDoc.LoadHtml(html);
         return htmlDoc.DocumentNode;
     }
-    public string GetHtml(string url)
-    {
+    //public string GetHtml(string url)
+    //{
         
-         var response = CallUrl(url).Result;
-         return response;
-    }
+    //     var response = CallUrl(url).Result;
+    //     return response;
+    //}
 
 
 }

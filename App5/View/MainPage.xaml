@@ -46,7 +46,7 @@
                     <Label  Text="Bitcoin" TextColor="#254E58" HorizontalTextAlignment="Center"/>
                 </StackLayout>
                 <Label Grid.Column="1" Grid.Row="1" Text="{Binding BitcoinPrice}" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="1" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="1" Text="{Binding BitcoinGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center"/>
                 <Label Grid.Column="3" Grid.Row="1" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center"/>
 
 

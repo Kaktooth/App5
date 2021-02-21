@@ -6,7 +6,7 @@
         <StackLayout BackgroundColor="#19181A">
 
             <Frame BackgroundColor="#112D32" Padding="19" CornerRadius="30">
-                <Label Text="CryptoTrade Simulator" HorizontalTextAlignment="Center" TextColor="#254E58" FontSize="36"/>
+                <Label Text="CryptoTrade Clicker" HorizontalTextAlignment="Center" TextColor="#254E58" FontSize="36"/>
             </Frame>
             <Frame BackgroundColor="#112D32" BorderColor="Aqua" Padding="4" CornerRadius="30">
                 <Label FontSize="16" TextColor="Aquamarine" Text="{Binding ClicksCount}"/>
@@ -27,14 +27,14 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Grid.Row="0" Text="Cryptocurrencies" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="1" Grid.Row="0" Text="Price" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="0" Text="Growth" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="0" Text="Price Chart" TextColor="#254E58" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="0" Grid.Row="0" Text="Cryptocurrencies" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="0" Text="Price" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="0" Text="Growth" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="0" Text="Price Chart" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
 
 
-                <StackLayout Grid.Column="0" Grid.Row="1">
+                <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="Center">
                     <Frame CornerRadius="100" 
            HeightRequest="40"
            WidthRequest="40"
@@ -45,9 +45,9 @@
                     </Frame>
                     <Label  Text="Bitcoin" TextColor="#254E58" HorizontalTextAlignment="Center"/>
                 </StackLayout>
-                <Label Grid.Column="1" Grid.Row="1" Text="{Binding BitcoinPrice}" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="1" Text="{Binding BitcoinGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="1" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="1" Text="{Binding BitcoinPrice}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="1" Text="{Binding BitcoinGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="1" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
 
                 <StackLayout Grid.Column="0" Grid.Row="2" HorizontalOptions="Center">
@@ -61,9 +61,9 @@
                     </Frame>
                     <Label  Text="Ethereum" TextColor="#254E58" HorizontalTextAlignment="Center"/>
                 </StackLayout>
-                <Label Grid.Column="1" Grid.Row="2" Text="Cryptocurrencies" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="2" Text="Heading 2" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="2" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center"/>
+                <Label Grid.Column="1" Grid.Row="2" Text="{Binding EtherPrice}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="2" Text="{Binding EtherGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="2" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
                 <StackLayout Grid.Column="0" Grid.Row="3" HorizontalOptions="Center">
                     <Frame CornerRadius="100" 
@@ -76,11 +76,52 @@
                     </Frame>
                     <Label  Text="Tether" TextColor="#254E58" HorizontalTextAlignment="Center"/>
                 </StackLayout>
-                <Label Grid.Column="1" Grid.Row="3" Text="Cryptocurrencies" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="2" Grid.Row="3" Text="Heading 2" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-                <Label Grid.Column="3" Grid.Row="3" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center"/>
-            </Grid>
+                <Label Grid.Column="1" Grid.Row="3" Text="{Binding TetherPrice}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="3" Text="{Binding TetherGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="3" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+           
+            
+            <StackLayout Grid.Column="0" Grid.Row="4" HorizontalOptions="Center">
+                <Frame CornerRadius="100" 
+           HeightRequest="40"
+           WidthRequest="40"
+           HorizontalOptions="Center" >
+                    <Image Source="Ripple.png" WidthRequest="40" HeightRequest="40" VerticalOptions="FillAndExpand"/>
+                </Frame>
+                <Label  Text="Ripple" TextColor="#254E58" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+                <Label Grid.Column="1" Grid.Row="4" Text="{Binding RipplePrice}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="4" Text="{Binding RippleGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="4" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 
+                <StackLayout Grid.Column="0" Grid.Row="5" HorizontalOptions="Center">
+                    <Frame CornerRadius="100" 
+           HeightRequest="40"
+           WidthRequest="40"
+           HorizontalOptions="Center" >
+                        <Image Source="Cardano.png" WidthRequest="40" HeightRequest="40" VerticalOptions="FillAndExpand"/>
+                    </Frame>
+                    <Label  Text="Cardano" TextColor="#254E58" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <Label Grid.Column="1" Grid.Row="5" Text="{Binding CardanoPrice}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="5" Text="{Binding CardanoGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="5" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+                <StackLayout Grid.Column="0" Grid.Row="6" HorizontalOptions="Center">
+                    <Frame CornerRadius="100" 
+           HeightRequest="40"
+           WidthRequest="40"
+           HorizontalOptions="Center" >
+                        <Image Source="Litecoin.png" WidthRequest="40" HeightRequest="40" VerticalOptions="FillAndExpand"/>
+                    </Frame>
+                    <Label  Text="Litecoin" TextColor="#254E58" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <Label Grid.Column="1" Grid.Row="6" Text="{Binding LitePrice}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2" Grid.Row="6" Text="{Binding LiteGrowth}" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3" Grid.Row="6" Text="Heading 3" TextColor="#254E58" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+
+            </Grid>
             <Button TextColor="Aquamarine" BackgroundColor="#112D32" Text="Give me 1$" Command="{Binding ClickCommand}" CornerRadius="30"/>
 
         </StackLayout>
